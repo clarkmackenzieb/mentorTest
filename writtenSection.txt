@@ -1,29 +1,44 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
-
+  Semantic HTML means using tags that define what goes in them rather than just displaying information. For example, a <p> tag denotes that a paragraph will be inside. Header tags are another example. 
+  
 2. What is the box model?
-
+  The box model is a way of describing the margin, border, and padding attributes to content in an HTML element. 
+  
 3. What is the difference between IDs and Classes?
-
+  The class selector is more commonly used to change multiple elements and is referenced by .class-name in CSS. an ID is used to target a single element, and is referenced with #id-name.
+  
 4. What does the z-index do?
-
+  Z-index is a layer modifier. It determines what is in the front, back, and what order things go in in-between.
+  
 5. Summarize what the keyword 'this' is used for?
-
+  It is used to provide contexual binding for functions and methods. 
+  
 6. What is a callback?
-
+  A callbackback is a function passed as a parameter of another function and is executed within that function. 
+  
 7. What is a closure?
-
+  A closure is a secure function-within-a-function that has access to the parent function's variables without giving the parent function access to its own variables.
+  
 8. How does prototype work?
-
+  Prototype is a way to create new, unqiue methods on objects such as arrays or strings. 
+  
 9. What is MVC?
-
+  A model-view-controller is splitting an app into secctions (the model, the view, and the controller) that each handle specifics about that part of the project. This allows an app to be easily scaelable.
+  
 10. What is the component lifecycle?
-
+  The component lifecycle is the firing order of React. The most well-known are componentWillMount, which usually doesn't have any component manipulation in it; the componentDidMount, which is where http calls are made; componentWillReceiveProps, which takes an argument newProps and compares the old props with the new to decide what to do with the new information; shouldComponentUpdate, which decides whether or not a component should re-render; componentDidUpdate, which is what a compenent does *after* an update; and component will unmount, which is the last man standing before component TERMINATION. This is where you can reset eventListeners.
+  
 11. What is REST?
-
+  RESTful API is using HTTP requests get, post, put, and delete to receive or manipulate data. 
+  
 12. Name three ways of getting data from the URL using express
-
+  You can use query, params, or a flat URL to make requests from the url. For example,
+  http://localhost:3005/user
+  http://localhost:3005/user/:id
+  http://localhost:3005/user/?name=Mackenzie
+  
 create table users (
 id serial,
 name varchar(255),
@@ -33,9 +48,17 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+SELECT * FROM users;
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+INSERT INTO users (name, email) 
+VALUES ("your name", "fake@fake.com");
 
 -Update the newly created user's name to 'Bobby Boy':
+UPDATE users 
+SET name = "Bobby Boy"
+WHERE email = "fake@fake.com";
 
 -Delete the newly updated user:
+DETEL FROM users 
+WHERE name = "Bobby Boy";
