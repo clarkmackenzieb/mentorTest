@@ -1,7 +1,7 @@
 //JS Basics
 //Run npm test in the command line to test your solutions
 module.exports = {
-  const reverseIt = (str) => {
+  let reverseIt = (str) => {
     return str.split('').reverse().join(''); 
 }
 
@@ -10,7 +10,7 @@ module.exports = {
 
   const removeDups = (arr) => {
     let noDupes = new Set(arr);
-    return [...arr]
+    return [...noDupes]
   }
 //quick and dirty ES6
   //uncomment and finish the removeDups function. It will take in one parameter which is an Array
