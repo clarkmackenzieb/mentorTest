@@ -4,24 +4,44 @@ module.exports = {
   // reverseIt:
 
   //uncomment and finish the reverseIt function. It will take in one parameter which is a String and
-  //reverse it
+  const reverseIt = (str) => {
+    return str.split('').reverse().join(''); 
+}
 
-  // removeDups:
-
+  const removeDups = (arr) => {
+    let noDupes = new Set(arr);
+    return [...arr]
+  }
+//quick and dirty ES6
   //uncomment and finish the removeDups function. It will take in one parameter which is an Array
   //remove all duplicates
 
-  // titleIt:
+  const titleIt = (str) => {
+    return str
+        .toLowerCase()
+        .split(" ")
+        .map(function(word) {
+            return word[0].toUpperCase() + word.substr(1);})
+        .join(" ");
+}
 
   //uncomment and finish the titleIt function. It will take in one parameter which is a String and
   //capitalize the first letter of each word
 
-  // vowelCounter:
+  const vowelCounter = (str) => {
+  var newStr = str.replace(/[^aeiou]/ig, "");
+  return newStr.length;
+}
 
   //uncomment and finish the vowelCounter function. It will take in one parameter which is a String and
   //return the number of vowels in the string
 
-  // isPrime:
+  const isPrime = (num) => {
+  for(let i = 2; i < num; i++)
+    if(num % i === 0) return false;
+  return num !== 1;
+}
+
 
   //uncomment and finish the isPrime function. It will take in one parameter which is a Number and
   //return true if it is prime and false if it is not
@@ -30,7 +50,7 @@ module.exports = {
   //var foo = 10 + '20';
   //uncomment the foo property and give your answer as its value
 
-  //foo:
+ foo: 1020;
 
   //what is the outcome of the two console.logs below?
   //   var foo = "Hello";
@@ -41,6 +61,6 @@ module.exports = {
   // console.log(foo + bar);
   // uncomment the log1 and log2 properties and give your answers as their values
 
-  // log1:
-  // log2:
+  log1: "Hello World
+  log2: "Hello" undefined 
 }
